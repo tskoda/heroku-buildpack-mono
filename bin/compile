@@ -65,7 +65,7 @@ BUILD_CACHE_LOCATION=${CACHE_DIR}/build/
 mkdir -p ${BUILD_CACHE_LOCATION}
 
 mono ${NUGET_EXECUTABLE_PATH} restore -NonInteractive
-xbuild /property:Configuration=Release /property:OutDir=${BUILD_CACHE_LOCATION} ${SLN}
+xbuild /property:Configuration=Debug /property:OutDir=${BUILD_CACHE_LOCATION} ${SLN}
 
 cp -r ${BUILD_CACHE_LOCATION}* ${BUILD_DIR}
 
